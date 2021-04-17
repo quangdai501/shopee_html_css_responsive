@@ -1,0 +1,176 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header__cart-notify {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px #ccc;
+        z-index: 4;
+    }
+    .header__cart-notify::after {
+        display: none;
+    }
+    .footer-copyright {
+        padding-top: 15px;
+        margin: auto;
+        text-align: center;
+    }
+    .header {
+        position: fixed;
+        /* width: 100%; */
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .app__container {
+        margin-top: 50px;
+    }
+    .header__sort-bar {
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .mobile-category__list {
+        /* position: fixed; */
+        top: calc(var(--header-height) + var(--sort-bar-height));
+        left: 0;
+        /* background-color: var(--white-color); */
+        display: flex;
+        font-size: 1.4rem;
+        overflow-x: scroll;
+        z-index: 2;
+        width: 100%;
+        padding: 0 5px;
+        /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); */
+    }
+    .mobile-category__list::-webkit-scrollbar {
+        display: none;
+    }
+    /* .mobile-category {
+        background-color: var(--white-color);
+    } */
+    .mobile-category__item {
+        list-style: none;
+        flex-shrink: 0;
+        border-radius: 4px;
+        padding: 3px 0;
+        margin: 10px 5px;
+    }
+    .mobile-category__link {
+        width: 115px;
+        line-height: 2rem;
+        height: 4rem;
+        text-align: center;
+        text-decoration: none;
+        color: var(--white-color);
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-category__item:nth-of-type(3n + 1) {
+        background-color: #87afd8;
+    }
+    .mobile-category__item:nth-of-type(3n + 2) {
+        background-color: #76c9bd;
+    }
+    .mobile-category__item:nth-of-type(3n + 3) {
+        background-color: #88cf81;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 74px;
+        text-align: right;
+    }
+}
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__search {
+        position: fixed;
+        width: 100%;
+        top: calc(var(--header-height));
+        left: 0;
+        z-index: 3;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        padding: 0 16px;
+        animation: mobileSearchSideIn linear 0.3s;
+        display: none;
+    }
+    .header-width-search {
+        /* display: relative; */
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .header__cart,
+    .header__logo {
+        width: unset;
+    }
+    .header-search-item {
+        display: block;
+    }
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: cacl(var(--header-height));
+        }
+    }
+    .header-search-checkbox:checked ~ .header__search {
+        display: flex;
+    }
+
+    .header__search-history {
+        width: 100%;
+        /* display: block; */
+        position: fixed;
+        top: calc(var(--header-height)+ var(--sort-bar-height));
+        left: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        padding: 0 16px;
+    }
+    .home-pagination__link-angle,
+    .home-pagination__link {
+        padding: 6px 12px;
+        margin: 0 2px;
+    }
+
+    .home-pagination--margin {
+        margin: 30px 0px 30px;
+    }
+    .header__logo-img {
+        width: 110px;
+    }
+    .home-product {
+        margin: 0 8px;
+    }
+    .footer {
+        padding: 0 8px;
+    }
+}
